@@ -1,19 +1,35 @@
 <html>
 
-<body>
-    <canvas id="TopBar" width="100" height="100">
+<style>
 
-<script>
+    body
+    {
+        background-color: rgb(83, 83, 83);
+    }
 
-var canvas = document.getElementById("TopBar");
-var ctx = canvas.getContext("2d");
+</style>
 
-ctx.fillStyle = 'green';
-ctx.color = #000000;
+<div id="topBar" style="position: absolute; left: 0; top: 0; width: 500; height: 100; background-color: aliceblue;">
 
-</script>
+    <img src="Recources/logos/logo_chs.png" alt="" width="300"/>
 
-    </canvas>
-</body>
+    <script>
+
+        topBar = document.getElementById("topBar");
+
+        function UpdateTopBarPosition()
+        {
+            var width = topBar.clientWidth;
+
+            width /= 2;
+
+            topBar.style.left = (window.innerWidth / 2) - width;
+        }
+
+        UpdateTopBarPosition();
+
+    </script>
+
+</div>
 
 </html>
