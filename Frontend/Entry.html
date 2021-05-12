@@ -1,35 +1,39 @@
 <html>
 
-<style>
+    <style>
 
-    body
-    {
-        background-color: rgb(83, 83, 83);
-    }
+        body
+        {
+            background-color: rgb(71, 71, 71);
+        }
 
-</style>
-
-<div id="topBar" styl="position: absolute; left: 0; top: 0; width: 500; height: 100; background-color: aliceblue;">
-
-    <img src="Recources/logos/logo_chs.png" alt="" width="300"/>
+    </style>
 
     <script>
 
-        topBar = document.getElementById("topBar");
-
-        function UpdateTopBarPosition()
+        function Int(i)
         {
-            var width = topBar.clientWidth;
-
-            width /= 2;
-
-            topBar.style.left = (window.innerWidth / 2) - width;
+            return parseInt(i,10);
         }
-
-        UpdateTopBarPosition();
 
     </script>
 
-</div>
+    <!--This is for the very top bar.-->
+    <div id="topBar" style="position: absolute; left: 0; top: 0; width: 0; height: 200; background-color: rgb(102, 102, 102);">
+        <img src="Recources/logos/logo_chs.png" width="500" style="position: relative; top: 10;" id="CHS_LOGO"/>
+        <script src="TopBar.js"> </script>
+    </div>
 
+    <!--Menu buttons, and image board.-->
+    <div id="ImageBoard" style="position: absolute; top: 0; left: 0; background-color: rgb(36, 36, 36); width: 800; height: 900;">
+
+            <div id="ImageBoardStrip" style="position: absolute; top: 0; left: 0; background-color: rgb(129, 129, 129); width: 0; height: 10;"></div>
+            <div id="HOME_BUTTON" style="position: absolute; top: 10; left: 0; width: 100; height: 100; background-color: black;"></div>
+            <div id="ABOUTUS_BUTTON" style="position: absolute; top: 10; left: 0; width: 100; height: 100; background-color: black;"></div>
+            <div id="PLACE_HOLDER0" style="position: absolute; top: 10; left: 0; width: 100; height: 100; background-color: black;"></div>
+            <div id="SlideShowBox" style="position: abs;"></div>
+
+            <script src="ImageBoard.js"></script>
+
+    </div>
 </html>
